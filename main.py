@@ -1,19 +1,21 @@
+#           智能图像识别器
 #######################################
-# 197 颜学谦 智能图像识别器
 # 需要的第三方库(使用pip安装，python3.10版本):
 # Pillow==9.2.0
 # windnd==1.0.7
-# opencv-contrib-python==4.6.0.66(含numpy==1.23.2)
+# opencv-python==4.6.0.66(含numpy==1.23.2)
 # requests==2.28.1
-# 请在windows系统下编译运行此程序(linux不支持)
+# 请在windows系统下编译运行此程序
 # 请将压缩包内的images文件夹与源程序放在同一文件夹下
 # 建议使用100%dpi的显示器体验本程序
 #######################################
 
 from tkinter import *
 from tkinter import filedialog, scrolledtext
+from tkinter import font
 from PIL import Image, ImageTk, ImageGrab
 import os, json, base64, requests, cv2, windnd
+import easygui
 
 FILEPATH = os.path.dirname(__file__)
 
@@ -282,8 +284,18 @@ def f2b64(path):
     f.close()
     return str(b64, encoding='utf-8')
 
-def camera():
-    cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+def getcam():
+    choicebox= Tk()
+    choicebox.title('选择摄像头')
+    choicebox.iconbitmap(FILEPATH+'\images\cam.ico')
+    choicebox.geometry('360*130')
+    choicebox.resizable(0,0)
+
+    Label(choicebox, text='选择一个摄像头')
+
+
+def camera(video):
+    cam = cv2.VideoCapture(video, cv2.CAP_DSHOW)
     while 1 :
         a, img=cam.read()
         img = cv2.flip(img, 1)
