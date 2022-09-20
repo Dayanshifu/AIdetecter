@@ -8,7 +8,7 @@
 # 请将压缩包内的images文件夹与源程序放在同一文件夹下
 # 建议使用100%dpi的显示器体验本程序
 # 测试平台: ubuntu wsl; ubuntu 22.04; 
-# archlinux9月更新(xorg+gnome); manjaro(gnome和kde)
+#   archlinux9月更新(xorg+gnome); manjaro(gnome和kde)
 # deepin等部分linux发行版不兼容
 #######################################
 
