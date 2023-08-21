@@ -28,8 +28,8 @@ image = ImageTk.PhotoImage(Image.open(imagePath))
 
 class ai():
     def face(b64):
-        url = 'https://api.huiwancode.com/outapi/getaiface'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64,"field":"age,beauty,gender,face_shape,expression,glasses,face_type,mask,emotion"}}
+        url = 'api/getaiface'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64,"field":"age,beauty,gender,face_shape,expression,glasses,face_type,mask,emotion"}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -57,8 +57,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def body(b64):
-        url = 'https://api.huiwancode.com/outapi/getaibodyanalysis'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64}}
+        url = 'api/getaibodyanalysis'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -79,8 +79,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def ocr(b64):
-        url = 'https://api.huiwancode.com/outapi/getaiocr'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64}}
+        url = 'api/getaiocr'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -100,8 +100,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def ai(b64):
-        url = 'https://api.huiwancode.com/outapi/getaidetect'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64}}
+        url = 'api/getaidetect'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -127,8 +127,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def plant(b64):
-        url = 'https://api.huiwancode.com/outapi/getaiplantdetect'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64,"baikenum":"5"}}
+        url = 'api/getaiplantdetect'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64,"baikenum":"5"}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -158,8 +158,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def animal(b64):
-        url = 'https://api.huiwancode.com/outapi/getaianimaldetect'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64,"baikenum":"5"}}
+        url = 'api/getaianimaldetect'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64,"baikenum":"5"}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -189,8 +189,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def dish(b64):
-        url = 'https://api.huiwancode.com/outapi/getaidishdetect'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64,"baikenum":"5"}}
+        url = 'api/getaidishdetect'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64,"baikenum":"5"}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -223,8 +223,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def car(b64):
-        url = 'https://api.huiwancode.com/outapi/getaicardetect'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64,"baikenum":"5","num":"5"}}
+        url = 'api/getaicardetect'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64,"baikenum":"5","num":"5"}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
@@ -256,8 +256,8 @@ class ai():
             return str(Res['status']['error_code']) +' '+Res['status']['msg']
     
     def qr(b64):
-        url = 'https://api.huiwancode.com/outapi/getqrcodecontent'
-        postData = {"data":{"auth":{"id":"i561hf7h","secret":"s3jce5689i414ccg","client":"c6a92i6h"},"image":b64}}
+        url = 'api/getqrcodecontent'
+        postData = {"data":{"auth":{"id":"id","secret":"secret","client":"client"},"image":b64}}
         headers = {'Content-type':'application/json', 'Accept':'*/*'}
         postData = json.dumps(postData)
         try:
